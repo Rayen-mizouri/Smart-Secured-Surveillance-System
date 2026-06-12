@@ -1,0 +1,99 @@
+🔐 Smart Secured Surveillance System (PFE Project)
+📌 System Architecture (IMPORTANT)
+
+This project follows a client–server architecture:
+
+🖥️ Client Application
+server_search.exe
+Lightweight interface used to access the system
+Sends requests to the server for video search / retrieval
+🌐 Server Side (Core System)
+All AI processing, encryption, and video handling happens here
+Handles:
+Video recording
+YOLOv8 object detection
+AES-256 encryption/decryption
+Video storage
+HTTP streaming server
+
+👉 The client does NOT process AI or encryption locally — it only interacts with the server.
+--------------------------------------------------------------
+📌 Overview
+
+The Smart Secured Surveillance System is an AI-powered secure video surveillance platform that integrates:
+
+Real-time object detection using YOLOv8
+Strong encryption using AES-256-CBC
+Secure client–server communication for video access and retrieval
+
+The system ensures confidential, tamper-resistant, and remotely accessible surveillance data, even in untrusted environments.
+-----------------------------------------------------------------
+🚀 Key Features
+🎥 Real-Time Video Recording
+OpenCV-based video capture
+Continuous surveillance support
+🧠 AI Object Detection
+YOLOv8 integration
+Real-time intelligent detection and monitoring
+🔐 Encryption Layer
+AES-256-CBC encryption for video files
+Password-based key derivation
+Chunk-based encryption for large files
+PKCS7 padding for security integrity
+🌐 Client–Server System
+Lightweight client: server_search.exe
+Server handles:
+Video processing
+Storage
+Streaming
+Secure file access
+📊 Security Analysis Module
+NPCR (pixel change rate)
+UACI (intensity variation)
+Entropy analysis
+Correlation analysis
+Encryption/decryption performance benchmarking
+Histogram comparison
+-----------------------------------------------
+🛠️ Tech Stack
+Python 3.8+
+OpenCV
+Ultralytics YOLOv8
+Cryptography (AES-256-CBC)
+NumPy / SciPy
+HTTP Server / Requests
+PyInstaller (for .exe client)
+------------------------------------------------------
+📦 Installation
+git clone https://github.com/Rayen-mizouri/Smart-Secured-Surveillance-System.git
+cd Smart-Secured-Surveillance-System
+pip install -r requirements.txt
+--------------------------------------------------------
+▶️ Usage
+
+Start Server (Core System)
+python video_server.py
+python yolo.py
+----------------------------------
+Run Client Application
+server_search.exe
+------------------------------------------------
+📊 Security & Performance Analysis
+🔢 Entropy analysis (randomness validation)
+📉 NPCR & UACI (differential attack resistance)
+📊 Histogram distortion analysis
+⏱️ Encryption/decryption benchmarks
+🔁 Correlation analysis
+---------------------------------------------
+🎯 Use Cases
+Smart surveillance systems
+Secure video storage & transmission
+AI-based monitoring systems
+Cybersecurity research in multimedia encryption
+-----------------------------------------------------
+👨‍💻 Authors
+Rayen Mizouri------------Encryption system, backend development, system optimization
+GitHub: https://github.com/Rayen-mizouri
+---
+Yassin Hamed-----------Video processing, AI integration, YOLO integration
+GitHub: https://github.com/yassinhamed
